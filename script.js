@@ -18,8 +18,13 @@ class Rectangle {
 }
 
 class Square extends Rectangle {
+  constructor(side) {
+    // The constructor of Square should call the constructor of Rectangle with the same side for width and height
+    super(side, side);
+  }
+
   getPerimeter() {
-    return 4 * this.width; // Since a square has all sides equal, perimeter = 4 * side
+    return 4 * this.width;
   }
 }
 
